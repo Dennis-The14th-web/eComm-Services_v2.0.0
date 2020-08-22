@@ -4,7 +4,9 @@
   "description": "bamazon is a amazon like GUI app",
   "main": "index.js",
   "scripts": {
-    "start": "nodemon --watch backend --exec babel-node backend/server.js"
+    "start": "nodemon --watch backend --exec babel-node backend/server.js",
+    "build": "rm -rf dist && babel backend -d dist",
+    "heroku-postbuild": "npm run build && cd frontend && npm install && npm run build"
   },
   "repository": {
     "type": "git",
@@ -16,6 +18,10 @@
     "url": "https://github.com/Dennis-The14th-web/Bamazon-mern/issues"
   },
   "homepage": "https://github.com/Dennis-The14th-web/Bamazon-mern#readme",
+  "engines": {
+    "node": "12.4.0",
+    "npm": "6.9.0"
+  },
   "dependencies": {
     "express": "^4.17.1"
   },
