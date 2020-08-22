@@ -1,7 +1,7 @@
 {
   "name": "bamazon-mern",
   "version": "1.0.0",
-  "description": "bamazon is a amazon like GUI app",
+  "description": "bamazon is an amazon like GUI app",
   "main": "index.js",
   "scripts": {
     "start": "nodemon --watch backend --exec babel-node backend/server.js",
@@ -30,6 +30,11 @@
     "@babel/core": "^7.11.4",
     "@babel/node": "^7.10.5",
     "@babel/preset-env": "^7.11.0",
+    "eslint": "^7.7.0",
+    "eslint-config-airbnb": "^18.2.0",
+    "eslint-plugin-import": "^2.22.0",
+    "eslint-plugin-jsx-a11y": "^6.3.1",
+    "eslint-plugin-react-hooks": "^4.1.0",
     "nodemon": "^2.0.4"
   }
 }
