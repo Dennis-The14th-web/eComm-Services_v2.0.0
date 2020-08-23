@@ -79,7 +79,7 @@ import {
     }
   };
   
-  const deleteProdcut = (productId) => async (dispatch, getState) => {
+  const deleteProduct = (productId) => async (dispatch, getState) => {
     try {
       const {
         userSignin: { userInfo },
@@ -124,6 +124,6 @@ import {
     listProducts,
     detailsProduct,
     saveProduct,
-    deleteProdcut,
+    deleteProduct,
     saveProductReview,
   };

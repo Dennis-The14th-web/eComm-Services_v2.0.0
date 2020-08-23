@@ -31,7 +31,7 @@ function App() {
         <header className="header">
           <div className="brand">
             <button onClick={openMenu}>&#9776;</button>
-            <Link to="/">amazona</Link>
+            <Link to="/">bamazon</Link>
           </div>
           <div className="header-links">
             <a href="cart.html">Cart</a>
@@ -42,7 +42,7 @@ function App() {
             )}
             {userInfo && userInfo.isAdmin && (
               <div className="dropdown">
-                <a href="#">Admin</a>
+                <a href="admin.html">Admin</a>
                 <ul className="dropdown-content">
                   <li>
                     <Link to="/orders">Orders</Link>

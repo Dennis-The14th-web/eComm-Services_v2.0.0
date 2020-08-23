@@ -4,7 +4,7 @@ import axios from 'axios';
 import {
   saveProduct,
   listProducts,
-  deleteProdcut,
+  deleteProduct,
 } from '../actions/productActions';
 
 function ProductsScreen(props) {
@@ -73,7 +73,7 @@ function ProductsScreen(props) {
     );
   };
   const deleteHandler = (product) => {
-    dispatch(deleteProdcut(product._id));
+    dispatch(deleteProduct(product._id));
   };
   const uploadFileHandler = (e) => {
     const file = e.target.files[0];
@@ -88,6 +88,7 @@ function ProductsScreen(props) {
       })
       .then((response) => {
         setImage(response.data);
+        // console.log(response.data);
         setUploading(false);
       })
       .catch((err) => {

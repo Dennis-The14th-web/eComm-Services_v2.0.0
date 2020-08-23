@@ -57,9 +57,9 @@ function ProductScreen(props) {
         <>
           <div className="details">
             <div className="details-image">
-              <img src={product.image} alt="product"></img>
+              <img src={product.image} alt={product}></img>
             </div>
-            <div className="details-info">
+             <div className="details-info">
               <ul>
                 <li>
                   <h4>{product.name}</h4>
@@ -171,7 +171,7 @@ function ProductScreen(props) {
                   </div>
                 )}
               </li>
-            </ul>
+            </ul> 
           </div>
         </>
       )}
