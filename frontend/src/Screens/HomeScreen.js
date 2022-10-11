@@ -10,15 +10,12 @@ function HomeScreen(props) {
   const [sortOrder, setSortOrder] = useState('');
   const category = props.match.params.id ? props.match.params.id : '';
   const productList = useSelector((state) => state.productList);
+  // console.log(productList);
   const { products, loading, error } = productList;
   const dispatch = useDispatch();
   useEffect(() => {
     dispatch(listProducts(category));
-
-    return () => {
-      //
-    };
-  }, [category]);
+  }, [category, dispatch]);
 
   const submitHandler = (e) => {
     e.preventDefault();

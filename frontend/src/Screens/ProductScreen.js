@@ -1,9 +1,12 @@
 import React, { useEffect, useState } from 'react';
 import { Link } from 'react-router-dom';
 import { useSelector, useDispatch } from 'react-redux';
+// import { detailsProduct, saveProductReview } from '../actions/productActions';
 import { detailsProduct, saveProductReview } from '../actions/productActions';
 import Rating from '../components/Rating';
 import { PRODUCT_REVIEW_SAVE_RESET } from '../constants/productConstants';
+
+
 
 function ProductScreen(props) {
   const [qty, setQty] = useState(1);
@@ -12,8 +15,10 @@ function ProductScreen(props) {
   const userSignin = useSelector((state) => state.userSignin);
   const { userInfo } = userSignin;
   const productDetails = useSelector((state) => state.productDetails);
+  console.log(productDetails)
   const { product, loading, error } = productDetails;
   const productReviewSave = useSelector((state) => state.productReviewSave);
+  console.log(productReviewSave)
   const { success: productSaveSuccess } = productReviewSave;
   const dispatch = useDispatch();
 
@@ -25,10 +30,7 @@ function ProductScreen(props) {
       dispatch({ type: PRODUCT_REVIEW_SAVE_RESET });
     }
     dispatch(detailsProduct(props.match.params.id));
-    return () => {
-      //
-    };
-  }, [productSaveSuccess]);
+  }, [productSaveSuccess, dispatch]);
   const submitHandler = (e) => {
     e.preventDefault();
     // dispatch actions
