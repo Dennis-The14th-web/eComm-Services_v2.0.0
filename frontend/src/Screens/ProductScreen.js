@@ -1,7 +1,6 @@
 import React, { useEffect, useState } from 'react';
 import { Link } from 'react-router-dom';
 import { useSelector, useDispatch } from 'react-redux';
-// import { detailsProduct, saveProductReview } from '../actions/productActions';
 import { detailsProduct, saveProductReview } from '../actions/productActions';
 import Rating from '../components/Rating';
 import { PRODUCT_REVIEW_SAVE_RESET } from '../constants/productConstants';
@@ -12,13 +11,15 @@ function ProductScreen(props) {
   const [qty, setQty] = useState(1);
   const [rating, setRating] = useState(0);
   const [comment, setComment] = useState('');
-  const userSignin = useSelector((state) => state.userSignin);
+  const userSignin = useSelector(state => state.userSignin);
   const { userInfo } = userSignin;
-  const productDetails = useSelector((state) => state.productDetails);
-  console.log(productDetails)
+  const productDetails = useSelector( state => state.productDetails);
+  // console.log("HERE: ", productDetails)
   const { product, loading, error } = productDetails;
-  const productReviewSave = useSelector((state) => state.productReviewSave);
-  console.log(productReviewSave)
+  console.log("IN THE BOX: ", product, loading);
+  // console.log("INBOX: ", error);
+  const productReviewSave = useSelector(state => state.productReviewSave);
+  // console.log(productReviewSave)
   const { success: productSaveSuccess } = productReviewSave;
   const dispatch = useDispatch();
 
@@ -54,7 +55,7 @@ function ProductScreen(props) {
       {loading ? (
         <div>Loading...</div>
       ) : error ? (
-        <div>{error} </div>
+        <div>{error}</div>
       ) : (
         <>
           <div className="details">
@@ -120,7 +121,7 @@ function ProductScreen(props) {
           </div>
           <div className="content-margined">
             <h2>Reviews</h2>
-            {!product.reviews.length && <div>There is no review</div>}
+            {!product.reviews && <div>There is no review</div>}
             <ul className="review" id="reviews">
               {product.reviews.map((review) => (
                 <li key={review._id}>

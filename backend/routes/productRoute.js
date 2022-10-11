@@ -1,7 +1,7 @@
 import express from 'express';
-import data from '../data.js';
+// import data from '../data.js';
 import Product from '../models/productModel.js';
-import { isAuth, isAdmin } from '../util.js';
+import { isAuth, isAdmin } from '../utils/index.js';
 
 const router = express.Router();
 
@@ -21,14 +21,13 @@ router.get('/', async (req, res) => {
       ? { price: 1 }
       : { price: -1 }
     : { _id: -1 };
-  const products = await Product.find({ ...category, ...searchKeyword }).sort(
-    sortOrder
-  );
-  res.send(data.products);
+  const products = await Product.find({ ...category, ...searchKeyword })
+  .sort(sortOrder);
+  res.send(products);
 });
 
-router.get('/api/products/:id', async (req, res) => {
-  const product = await Product.findOne({ _id: req.params.id });
+router.get('/:id', async (req, res) => {
+  const product = await Product.findById({ _id: req.params.id });
   if (product) {
     res.send(product);
   } else {
@@ -37,7 +36,7 @@ router.get('/api/products/:id', async (req, res) => {
 });
 
 router.post('/:id/reviews', isAuth, async (req, res) => {
-  const product = await Product.findById(req.params.id);
+  const product = await Product.findOne(req.params.id);
   if (product) {
     const review = {
       name: req.body.name,

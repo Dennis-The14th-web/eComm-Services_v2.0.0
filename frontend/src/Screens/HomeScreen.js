@@ -12,6 +12,7 @@ function HomeScreen(props) {
   const productList = useSelector((state) => state.productList);
   // console.log(productList);
   const { products, loading, error } = productList;
+  console.log("REEL: ", products, loading)
   const dispatch = useDispatch();
   useEffect(() => {
     dispatch(listProducts(category));

@@ -1,52 +1,18 @@
 {
-  "name": "bamazon-mern",
+  "name": "ecomm-services_v2.0.0",
   "version": "1.0.0",
-  "description": "bamazon is an amazon like GUI app",
+  "description": "Node spins and contain both nodes simultaneous",
   "main": "index.js",
-  "type": "module",
   "scripts": {
-    "start": "nodemon --watch --exec babel-node server.js",
-    "server": "concurrently \"if-env NODE_ENV=production\" \" npm run start\" \"cd frontend && npm run start\"",
-    "dev": "concurrently \"cd backend && npm run watch \" \"cd frontend && npm start \"",
-    "build": "rm -rf dist && babel backend -d dist",
-    "heroku-postbuild": "npm run build && cd frontend && npm install && npm run build"
-  },
-  "repository": {
-    "type": "git",
-    "url": "git+https://github.com/Dennis-The14th-web/Bamazon-mern.git"
+    "start": "node backend/server.js",
+    "develop": "concurrently \"cd backend && npm run watch\" \"cd frontend && npm start\"",
+    "install": "cd backend && npm i && cd ../frontend && npm i",
+    "seed": "cd backend && npm run seed",
+    "build": "cd frontend && npm run build"
   },
   "author": "Dennis Itua",
   "license": "ISC",
-  "bugs": {
-    "url": "https://github.com/Dennis-The14th-web/Bamazon-mern/issues"
-  },
-  "homepage": "https://github.com/Dennis-The14th-web/Bamazon-mern#readme",
-  "engines": {
-    "node": "12.4.0",
-    "npm": "6.9.0"
-  },
-  "dependencies": {
-    "aws-sdk": "^2.738.0",
-    "body-parser": "^1.19.0",
-    "dotenv": "^8.2.0",
-    "eslint-plugin-react": "^7.20.6",
-    "express": "^4.17.1",
-    "jsonwebtoken": "^8.5.1",
-    "mongoose": "^5.12.7",
-    "multer": "^1.4.2",
-    "multer-s3": "^2.9.0"
-  },
   "devDependencies": {
-    "@babel/cli": "^7.10.5",
-    "@babel/core": "^7.11.4",
-    "@babel/node": "^7.10.5",
-    "@babel/preset-env": "^7.11.0",
-    "concurrently": "^5.3.0",
-    "eslint": "^6.8.0",
-    "eslint-config-airbnb": "^18.2.0",
-    "eslint-plugin-import": "^2.22.0",
-    "eslint-plugin-jsx-a11y": "^6.3.1",
-    "eslint-plugin-react-hooks": "^4.1.0",
-    "nodemon": "^2.0.4"
+    "concurrently": "^7.4.0"
   }
 }
