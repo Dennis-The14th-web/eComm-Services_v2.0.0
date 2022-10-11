@@ -2,8 +2,6 @@ import express from 'express';
 import path from 'path';
 import { dirname } from 'path';
 import { fileURLToPath } from 'url';
-// import mongoose from 'mongoose';
-// import bodyParser from 'body-parser';
 import config from './config/index.js';
 import userRoute from './routes/userRoute.js';
 import productRoute from './routes/productRoute.js';
@@ -21,7 +19,7 @@ app.get('/api/config/paypal', (req, res) => {
   res.send(config.PAYPAL_CLIENT_ID);
 });
 const __dirname = dirname(fileURLToPath(import.meta.url));
-// app.use('/uploads', express.static(path.join(__dirname, '../uploads')));
+app.use('/uploads', express.static(path.join(__dirname, '../uploads')));
 app.use(express.static(path.join(__dirname, '../frontend/build')));
 app.get('*', (req, res) => {
   res.sendFile(path.join(__dirname, '../frontend/build/index.html'));
