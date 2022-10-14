@@ -85,7 +85,7 @@ function App() {
             <Route path="/" exact={true} component={HomeScreen} />
           </div>
         </main>
-        <footer className="footer">All right reserved. &#169;Dennis Itua MERN Stack Project</footer>
+        <footer className="footer">All right reserved. &#169; Dennis Itua MERN Stack Project 2022</footer>
       </div>
     </BrowserRouter>
   );
