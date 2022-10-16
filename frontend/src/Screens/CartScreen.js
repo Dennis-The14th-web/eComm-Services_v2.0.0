@@ -87,6 +87,6 @@ function CartScreen(props) {
     </div>
 
   </div>
-}
+};
 
 export default CartScreen;
