@@ -1,6 +1,6 @@
 # Bamazon-mern
 
-##### This is a MERN(stack) application (Full Stack);
+##### This is a MERN Stack application (Full Stack);
 
 #### REST
 #### Redux
