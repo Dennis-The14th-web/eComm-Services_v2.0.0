@@ -5,7 +5,7 @@
 
 #### Exposures
   - MongoDB, Express, ReactJS, NodeJS
-  - REST
+  - RESTful API
   - Redux
   - React Hooks
   - multer
