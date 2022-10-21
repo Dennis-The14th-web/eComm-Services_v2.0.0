@@ -12,9 +12,11 @@
   - multer-s3
   - aws-sdk
 
+#### Displaying the application's home screen
+
 <img src="./frontend/public/images/bamazon.png" alt="Employee data" title="Employee Data title">
 
 
-#### Display cart total quantity with prices
+#### Displaying the application's cart total quantity with the total price
 
 <img src="./frontend/public/images/bamazon-cart.png" alt="Employee data" title="Employee Data title">
