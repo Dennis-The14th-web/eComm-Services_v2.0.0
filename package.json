@@ -1,7 +1,7 @@
 {
   "name": "ecomm-services_v2.0.0",
   "version": "1.0.0",
-  "description": "Node spins and contain both nodes simultaneous",
+  "description": "Node spins and contain both nodes simultaneous on development",
   "main": "index.js",
   "scripts": {
     "start": "node backend/server.js",
