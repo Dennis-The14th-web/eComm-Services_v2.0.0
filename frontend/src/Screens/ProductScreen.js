@@ -68,7 +68,7 @@ function ProductScreen(props) {
                   <h4>{product.name}</h4>
                 </li>
                 <li>
-                  <a href="/reviews">
+                  <a href="#reviews">
                     <Rating
                       value={product.rating}
                       text={product.numReviews + ' reviews'}
@@ -125,7 +125,7 @@ function ProductScreen(props) {
             <ul className="review" id="reviews">
               {product.reviews.map((review) => (
                 <li key={review._id}>
-                  <div>{review.name}</div>
+                  <div style={{fontWeight: "bolder"}}>{review.name}</div>
                   <div>
                     <Rating value={review.rating}></Rating>
                   </div>
