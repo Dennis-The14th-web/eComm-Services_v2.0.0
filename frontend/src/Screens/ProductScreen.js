@@ -31,7 +31,7 @@ function ProductScreen(props) {
       dispatch({ type: PRODUCT_REVIEW_SAVE_RESET });
     }
     dispatch(detailsProduct(props.match.params.id));
-  }, [productSaveSuccess, dispatch]);
+  }, [productSaveSuccess]);  // "dispatch" was included as a dependency
   const submitHandler = (e) => {
     e.preventDefault();
     // dispatch actions
@@ -68,7 +68,7 @@ function ProductScreen(props) {
                   <h4>{product.name}</h4>
                 </li>
                 <li>
-                  <a href="#reviews">
+                  <a href="/reviews">
                     <Rating
                       value={product.rating}
                       text={product.numReviews + ' reviews'}

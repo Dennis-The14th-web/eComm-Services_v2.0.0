@@ -3,6 +3,7 @@
   "version": "1.0.0",
   "description": "Node spins and contain both nodes simultaneous on development",
   "main": "index.js",
+  "proxy": "http://localhost:5001",
   "scripts": {
     "start": "cd backend && npm start"
   },
