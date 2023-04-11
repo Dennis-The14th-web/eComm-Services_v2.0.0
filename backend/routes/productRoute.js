@@ -27,7 +27,7 @@ router.get('/', async (req, res) => {
 });
 
 router.get('/:id', async (req, res) => {
-  const product = await Product.findById({ _id: req.params.id });
+  const product = await Product.findOne({ _id: req.params.id });
   if (product) {
     res.send(product);
   } else {
@@ -36,7 +36,7 @@ router.get('/:id', async (req, res) => {
 });
 
 router.post('/:id/reviews', isAuth, async (req, res) => {
-  const product = await Product.findOne(req.params.id);
+  const product = await Product.findById(req.params.id);
   if (product) {
     const review = {
       name: req.body.name,
