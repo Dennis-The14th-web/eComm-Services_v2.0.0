@@ -6,7 +6,7 @@
   "proxy": "http://localhost:5001",
   "scripts": {
     "start": "cd backend && npm start",
-    "heroku-prebuild": "cd frontend && npm run build"
+    "heroku-postbuild": "cd frontend && npm run build"
   },
   "author": "Dennis Itua",
   "license": "ISC",
