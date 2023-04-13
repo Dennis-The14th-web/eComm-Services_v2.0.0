@@ -5,8 +5,7 @@
   "main": "index.js",
   "proxy": "http://localhost:5001",
   "scripts": {
-    "start": "cd backend && npm start",
-    "heroku-postbuild": "cd frontend && npm run build"
+    "start": "cd backend && npm start"
   },
   "author": "Dennis Itua",
   "license": "ISC",
