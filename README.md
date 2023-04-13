@@ -7,7 +7,7 @@
 
 #### Exposures
   - MongoDB, Express, ReactJS, NodeJS
-  - RESTful API
+  - RESTful Web services
   - Redux
   - React Hooks
   - multer
@@ -22,3 +22,7 @@
 #### Displaying the application's cart total quantity with the total price
 
 <img src="./frontend/public/images/bamazon-cart.png" alt="Employee data" title="Employee Data title">
+
+
+## Note
+- I had most of my application running on Heroku free tier. Since the new Heroku-22 stack integration which is no longer free. My applications are based on demand.

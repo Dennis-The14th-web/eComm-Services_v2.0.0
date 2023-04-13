@@ -85,7 +85,12 @@ function App() {
             <Route path="/" exact={true} component={HomeScreen} />
           </div>
         </main>
-        <footer className="footer">All right reserved. &#169; Dennis Itua MERN Stack Project 2022</footer>
+        <footer className="footer">
+          <a href="https://github.com/Dennis-The14th-web/eComm-Services_v2.0.0" style={{color: "#fff"}} target='_blank'>
+          <i class="fa-solid fa fa-github"></i>&nbsp;   
+          </a>
+          Dennis Itua MERN Stack Project 2022 &#169;
+        </footer>
       </div>
     </BrowserRouter>
   );
