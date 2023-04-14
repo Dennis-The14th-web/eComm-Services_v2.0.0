@@ -3,7 +3,7 @@
 ### This is a MERN stack application (Full Stack)
   - Bamazon is a MERN stack application. It's a production of the traditional up to date eCommerce services like Amazon, with it's client-side rendered in ReactJS and server-side in NodeJS. The application allows users to select a particular product, and go as far purchasing the product via PayPal, Credit and Debit payments with shipping details. user's also gets the option to sign up, sign in, rate, review with comments which are handled in the backend and saved to the database. Images are uploaded with multer and aws-sdk techniques through the use of thier dependencies
 
-##### Application link: Attention! Please due to the Heroku free tier/dynos used during deployment. This application might take a few seconds to reload it's dynos from idle mode (Note: Personal applications do not have that much traffic to keep it's dynos consistently running)... <a href="https://ecommbamazonwebservices.herokuapp.com/" target="_blank">www.ecommbamazonwebservices.herokuapp.com</a>
+##### Application link: Attention! Please due to the Heroku eco tier/dynos used during deployment. This application might take a few seconds to reload it's dynos from idle mode (Note: Personal applications do not have that much traffic to keep it's dynos consistently running)... <a href="https://ecommbamazonwebservices.herokuapp.com/" target="_blank">www.ecommbamazonwebservices.herokuapp.com</a>
 
 #### Exposures
   - MongoDB, Express, ReactJS, NodeJS
@@ -23,6 +23,3 @@
 
 <img src="./frontend/public/images/bamazon-cart.png" alt="Employee data" title="Employee Data title">
 
-
-## Note
-- I had most of my application running on Heroku free tier. Since the new Heroku-22 stack integration which is no longer free. My applications are based on demand.
